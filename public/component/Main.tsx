@@ -32,6 +32,19 @@ const Main = () => {
         },
       ];
 
+      const documents = [
+        { icon: "📝", text: "Photo CCCD: 02 bản" },
+        { icon: "📸", text: "Ảnh chân dung: 8 ảnh 3x4" },
+        { icon: "📝", text: "Giấy khám sức khỏe" }
+    ];
+    
+    const commitments = [
+        { icon: "✔️", text: "Không phát sinh chi phí thêm." },
+        { icon: "✔️", text: "Đảm bảo lịch thi đúng quy định." },
+        { icon: "✔️", text: "Hỗ trợ học buổi tối và Chủ Nhật." },
+        { icon: "✔️", text: "Giáo viên đưa đón tận nhà." },
+        { icon: "✔️", text: "Hỗ trợ trả góp không lãi suất." }
+    ];
   return (
     <div className="bg-white text-gray-900">
       {/* Header */}
@@ -105,8 +118,41 @@ const Main = () => {
         </div>
       </section>
 
+      {/* Documents */}
+            <section className="mt-8 flex flex-col items-center">
+                <h2 className="text-xl font-semibold text-red-600">Hồ Sơ Cần Chuẩn Bị</h2>
+                <ul className="bg-gray-100 p-6 rounded-lg shadow mt-4 space-y-4 w-full max-w-lg">
+                    {documents.map((doc, index) => (
+                        <li key={index} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow">
+                            <span className="text-2xl">{doc.icon}</span>
+                            <span className="text-gray-700 font-medium">{doc.text}</span>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+            
+            {/* Commitments */}
+            <section className="mt-8 flex flex-col items-center">
+                <h2 className="text-xl font-semibold text-red-600">Cam Kết Của Chúng Tôi</h2>
+                <ul className="bg-gray-100 p-6 rounded-lg shadow mt-4 space-y-4 w-full max-w-lg">
+                    {commitments.map((commitment, index) => (
+                        <li key={index} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow">
+                            <span className="text-2xl text-red-600">{commitment.icon}</span>
+                            <span className="text-red-700 font-medium">{commitment.text}</span>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+            
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white text-center py-4 mt-10">
+      <section className="my-8 text-center">
+                <h2 className="text-xl font-semibold text-white">Liên Hệ</h2>
+                <p className="text-white mt-2">
+                    Facebook: <a href="https://www.facebook.com/BangLaiXePTIT" className="text-white underline">Bằng Lái Xe PTIT</a>
+                </p>
+            </section>
         <p>© 2025 BLX PTIT.</p>
       </footer>
     </div>
