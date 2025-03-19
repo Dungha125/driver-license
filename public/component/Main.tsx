@@ -2,7 +2,7 @@ import React from "react";
 
 
 const Main = () => {
-    const pricing = [
+    const pricingB = [
         {
           package: 'Gói Cơ Bản',
           price: '13.999.000 VNĐ',
@@ -24,6 +24,66 @@ const Main = () => {
         {
           package: 'Gói VIP',
           price: '18.999.000 VNĐ',
+          features: [
+            'Nâng cao tình huống lái xe',
+            'Hỗ trợ thực hành trên xe chip',
+            'Trải nghiệm thực tế 3h',
+          ],
+        },
+      ];
+
+      const pricingBB = [
+        {
+          package: 'Gói Cơ Bản',
+          price: '14.999.000 VNĐ',
+          features: [
+            'Không bao gồm xe đưa đón',
+            'Học lý thuyết cơ bản',
+            '810 KM đường trường + sa hình',
+          ],
+        },
+        {
+          package: 'Gói Nâng Cao',
+          price: '17.999.000 VNĐ',
+          features: [
+            'Bao gồm xe đưa đón',
+            'Linh hoạt giờ học',
+            'Học cabin mô phỏng',
+          ],
+        },
+        {
+          package: 'Gói VIP',
+          price: '19.999.000 VNĐ',
+          features: [
+            'Nâng cao tình huống lái xe',
+            'Hỗ trợ thực hành trên xe chip',
+            'Trải nghiệm thực tế 3h',
+          ],
+        },
+      ];
+
+      const pricingC = [
+        {
+          package: 'Gói Cơ Bản',
+          price: '20.000.000 VNĐ',
+          features: [
+            'Không bao gồm xe đưa đón',
+            'Học lý thuyết cơ bản',
+            '810 KM đường trường + sa hình',
+          ],
+        },
+        {
+          package: 'Gói Nâng Cao',
+          price: '21.999.000 VNĐ',
+          features: [
+            'Bao gồm xe đưa đón',
+            'Linh hoạt giờ học',
+            'Học cabin mô phỏng',
+          ],
+        },
+        {
+          package: 'Gói VIP',
+          price: '23.999.000 VNĐ',
           features: [
             'Nâng cao tình huống lái xe',
             'Hỗ trợ thực hành trên xe chip',
@@ -70,7 +130,7 @@ const Main = () => {
       <section className="max-w-4xl mx-auto py-10 px-6">
         <h3 className="text-2xl font-bold text-center text-red-500">Bảng Giá B tự động</h3>
         <div className="grid md:grid-cols-3 gap-6 mt-6">
-          {pricing.map((item, index) => (
+          {pricingB.map((item, index) => (
             <div key={index} className="border rounded-lg shadow-md p-6 text-center">
               <h4 className="text-lg font-bold text-red-600">{item.package}</h4>
               <p className="text-xl font-semibold">{item.price}</p>
@@ -87,7 +147,7 @@ const Main = () => {
       <section className="max-w-4xl mx-auto py-10 px-6">
         <h3 className="text-2xl font-bold text-center text-red-500">Bảng Giá B số sàn</h3>
         <div className="grid md:grid-cols-3 gap-6 mt-6">
-          {pricing.map((item, index) => (
+          {pricingBB.map((item, index) => (
             <div key={index} className="border rounded-lg shadow-md p-6 text-center">
               <h4 className="text-lg font-bold text-red-600">{item.package}</h4>
               <p className="text-xl font-semibold">{item.price}</p>
@@ -104,7 +164,7 @@ const Main = () => {
       <section className="max-w-4xl mx-auto py-10 px-6">
         <h3 className="text-2xl font-bold text-center text-red-500">Bảng Giá C1</h3>
         <div className="grid md:grid-cols-3 gap-6 mt-6">
-          {pricing.map((item, index) => (
+          {pricingC.map((item, index) => (
             <div key={index} className="border rounded-lg shadow-md p-6 text-center">
               <h4 className="text-lg font-bold text-red-600">{item.package}</h4>
               <p className="text-xl font-semibold">{item.price}</p>
